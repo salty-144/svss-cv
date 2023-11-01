@@ -1,0 +1,64 @@
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  /* Media Queries */
+
+  @media (min-width: 900px) {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  &__main,
+  &__sidebar {
+    padding: 40px;
+  }
+
+  &__main {
+    background: rgb(52,73,94);
+background: linear-gradient(355deg, rgba(52,73,94,1) 0%, rgba(47,98,148,1) 35%);
+  }
+
+  &__sidebar {
+   background: rgb(52,73,94);
+background: linear-gradient(355deg, rgba(52,73,94,1) 0%, rgba(47,98,148,1) 35%);
+  }
+}
+
+/* CV Grid */
+.cv__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .box {
+    background: grey;
+    text-align: center;
+    padding: 10px;
+    border-radius: 3px;
+  }
+}
+
+@mixin important-text {
+  color: orange;
+  font-weight: bold;
+}
+
+h3 {
+  @include important-text;
+  font-size: 20px;
+}
